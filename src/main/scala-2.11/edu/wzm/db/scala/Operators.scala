@@ -11,7 +11,7 @@ class Operators {
   case class User(id: String, name: String, age: Int)
 
   //Insert operator
-  def add(user: User): Unit = {
+  def add(user: User): Boolean = {
     val conn = DBUtils.getConnection()
     try{
       val sql = new StringBuilder()
